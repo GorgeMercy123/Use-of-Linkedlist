@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        // Create a linked list of integers
+        LinkedList<int> myLinkedList = new LinkedList<int>();
+
+        // Add elements to the linked list
+        myLinkedList.AddLast(10);
+        myLinkedList.AddLast(20);
+        myLinkedList.AddLast(30);
+
+        // Traverse the linked list and print each element
+        Console.WriteLine("Linked List elements:");
+        foreach (int num in myLinkedList)
+        {
+            Console.WriteLine(num);
+        }
+
+        // Remove an element from the linked list
+        myLinkedList.Remove(20);
+
+        // Check if a specific element is in the linked list
+        int searchElement = 10;
+        if (myLinkedList.Contains(searchElement))
+        {
+            Console.WriteLine($"Element {searchElement} is in the linked list");
+        }
+        else
+        {
+            Console.WriteLine($"Element {searchElement} is not in the linked list");
+        }
+    }
+}
